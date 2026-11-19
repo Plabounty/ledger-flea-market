@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ledger Flea Market | Antiques, Collectibles &amp; Oddities | Lampe, MO</title>
+<meta name="description" content="Ledger Flea Market in Lampe, Missouri — antiques, collectibles and oddities. Vendor booths for rent: 4x4 ft $60, 4x8 ft $100, custom sizes by request. Indoor garage sale space available.">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<meta property="og:title" content="Ledger Flea Market — Lampe, MO">
+<meta property="og:description" content="Antiques, collectibles & oddities. Vendor booths and indoor garage sale space for rent.">
+<meta property="og:image" content="../images/ledger-logo-badge.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF5E6; --cream-2:#F3E9D2; --char:#22252A; --char-soft:#4a4d52;
+    --wine:#6B1E1E; --wine-dark:#521616; --gold:#C8963E; --gold-dark:#8E6524;
+    --line:rgba(34,37,42,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Work Sans",system-ui,sans-serif;color:var(--char);background:var(--cream);line-height:1.6;font-size:17px}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+  h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.08}
+  .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark)}
+  .btn{display:inline-block;font-weight:600;font-size:.95rem;text-decoration:none;padding:13px 24px;border-radius:3px;border:2px solid var(--wine);transition:background .15s,color .15s}
+  .btn.solid{background:var(--wine);color:var(--cream)}
+  .btn.solid:hover{background:var(--wine-dark);border-color:var(--wine-dark)}
+  .btn.ghost{color:var(--wine)}
+  .btn.ghost:hover{background:var(--wine);color:var(--cream)}
+
+  /* Top bar + header */
+  .topbar{background:var(--char);color:var(--cream-2);font-size:.85rem}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+  .topbar a{text-decoration:none}
+  header.site{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:12px;padding-bottom:12px}
+  .brand img{height:62px;width:auto}
+  nav.main{display:flex;align-items:center;gap:26px;font-weight:500;font-size:.95rem}
+  nav.main a{text-decoration:none}
+  nav.main a:not(.btn):hover{color:var(--wine)}
+  nav.main .btn{padding:9px 18px}
+
+  /* Hero */
+  .hero{padding:72px 0 80px;border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.6rem,5.2vw,4.3rem);margin:14px 0 20px}
+  .hero h1 em{color:var(--wine)}
+  .hero p.lede{font-size:1.15rem;color:var(--char-soft);max-width:34em}
+  .hero .actions{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+  .hero .facts{display:flex;gap:30px;margin-top:38px;padding-top:24px;border-top:1px solid var(--line);flex-wrap:wrap}
+  .hero .facts div{font-size:.88rem;color:var(--char-soft)}
+  .hero .facts b{display:block;font-family:"DM Serif Display",serif;font-weight:400;font-size:1.7rem;color:var(--char);line-height:1.1}
+  .seal{position:relative;aspect-ratio:1;max-width:440px;justify-self:center;width:100%}
+  .seal::before{content:"";position:absolute;inset:0;background:var(--cream-2);border-radius:50%;transform:translate(14px,14px)}
+  .seal::after{content:"";position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:50%}
+  .seal img{position:relative;width:100%;filter:drop-shadow(0 14px 22px rgba(34,37,42,.18))}
+
+  /* Sections */
+  section{padding:84px 0}
+  .head{max-width:640px;margin-bottom:44px}
+  .head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin-top:10px}
+  .head p{margin-top:12px;color:var(--char-soft)}
+  .head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+  /* Categories */
+  .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .cat{background:#fff;border:1px solid var(--line);border-radius:4px;padding:30px 28px 32px;position:relative}
+  .cat::before{content:"";position:absolute;top:0;left:28px;width:46px;height:3px;background:var(--gold)}
+  .cat svg{height:58px;width:auto;margin-bottom:16px}
+  .cat h3{font-size:1.7rem}
+  .cat .tag{font-family:"DM Serif Display",serif;font-style:italic;color:var(--wine);margin:2px 0 10px}
+  .cat p{color:var(--char-soft);font-size:.98rem}
+
+  /* Booths */
+  .booths{background:var(--cream-2)}
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+  .price{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:34px 30px;display:flex;flex-direction:column}
+  .price .size{font-size:.8rem;font-weight:600;letter-spacing:.16em;color:var(--gold-dark)}
+  .price h3{font-size:1.65rem;margin:6px 0 14px}
+  .price .amt{font-family:"DM Serif Display",serif;font-size:3.4rem;line-height:1}
+  .price .amt small{font-family:"Work Sans",sans-serif;font-size:.95rem;color:var(--char-soft)}
+  .price ul{list-style:none;margin:20px 0 26px;flex:1}
+  .price li{padding:8px 0 8px 22px;border-top:1px solid var(--line);font-size:.95rem;position:relative}
+  .price li::before{content:"";position:absolute;left:2px;top:17px;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+  .price .btn{text-align:center}
+  .price.featured{background:var(--wine);color:var(--cream);border-color:var(--wine);transform:translateY(-10px);box-shadow:0 18px 34px rgba(107,30,30,.22)}
+  .price.featured .size{color:var(--gold)}
+  .price.featured .amt small{color:var(--cream-2)}
+  .price.featured li{border-top-color:rgba(251,245,230,.2)}
+  .price.featured .btn{background:var(--cream);color:var(--wine);border-color:var(--cream)}
+  .price.featured .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--char)}
+  .badge{align-self:flex-start;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:var(--char);padding:4px 10px;border-radius:2px;margin-bottom:12px}
+  .note{text-align:center;margin-top:30px;color:var(--char-soft);font-size:.95rem}
+
+  /* Garage sale band */
+  .garage{background:var(--char);color:var(--cream);padding:0}
+  .garage .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center;padding-top:76px;padding-bottom:76px}
+  .garage h2{font-size:clamp(2.2rem,4vw,3.3rem);margin:10px 0 16px}
+  .garage h2 em{color:var(--gold)}
+  .garage p{color:var(--cream-2)}
+  .garage .eyebrow{color:var(--gold)}
+  .garage .btn{margin-top:26px;background:var(--gold);border-color:var(--gold);color:var(--char)}
+  .garage .btn:hover{background:var(--cream);border-color:var(--cream)}
+  .perks{display:grid;gap:14px}
+  .perk{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;border:1px solid rgba(251,245,230,.16);border-radius:4px}
+  .perk span{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:"DM Serif Display",serif;font-size:1.1rem}
+  .perk b{display:block;font-weight:600}
+  .perk small{color:var(--cream-2);font-size:.92rem}
+
+  /* Visit */
+  .visit .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:44px;align-items:start}
+  .hours{background:#fff;border:1px solid var(--line);border-radius:4px;padding:32px}
+  .hours h2{font-size:2.2rem;margin:8px 0 18px}
+  .hours table{width:100%;border-collapse:collapse}
+  .hours td{padding:11px 0;border-bottom:1px solid var(--line)}
+  .hours td:last-child{text-align:right;font-weight:500}
+  .hours address{font-style:normal;margin-top:22px;line-height:1.7}
+  .hours address b{font-family:"DM Serif Display",serif;font-weight:400;font-size:1.2rem}
+  .map{border-radius:4px;overflow:hidden;border:1px solid var(--line);height:100%;min-height:380px}
+  .map iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:sepia(.25) saturate(.8)}
+
+  /* Contact */
+  .contact{background:var(--cream-2)}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:56px}
+  .contact .side p{color:var(--char-soft);margin-top:14px}
+  .contact .side .phone{font-family:"DM Serif Display",serif;font-size:1.6rem;margin-top:22px;display:block;text-decoration:none;color:var(--wine)}
+  form{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:var(--cream);padding:34px;border:1px solid var(--line);border-radius:4px}
+  label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px}
+  input,textarea{width:100%;font:inherit;font-size:1rem;padding:11px 13px;border:1px solid rgba(34,37,42,.28);border-radius:3px;background:#fff;color:var(--char)}
+  input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+  textarea{min-height:110px;resize:vertical}
+  .full{grid-column:1/-1}
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .checks label{display:flex;gap:10px;align-items:center;font-weight:400;font-size:.95rem;padding:10px 12px;border:1px solid rgba(34,37,42,.2);border-radius:3px;background:#fff;cursor:pointer;margin:0}
+  .checks input{width:17px;height:17px;accent-color:var(--wine)}
+  button{font:inherit;font-weight:600;background:var(--wine);color:var(--cream);border:0;border-radius:3px;padding:14px 28px;cursor:pointer;justify-self:start}
+  button:hover{background:var(--wine-dark)}
+
+  footer{background:var(--wine);color:var(--cream-2);padding:46px 0 30px;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  footer img{height:54px}
+  footer nav{display:flex;gap:22px;flex-wrap:wrap}
+  footer nav a{text-decoration:none}
+  footer nav a:hover{color:var(--gold)}
+  footer .copy{width:100%;border-top:1px solid rgba(251,245,230,.18);margin-top:26px;padding-top:18px;font-size:.82rem;opacity:.8}
+
+  @media (max-width:960px){
+    nav.main a:not(.btn){display:none}
+    .hero .wrap,.garage .wrap,.visit .wrap,.contact .wrap{grid-template-columns:1fr}
+    .seal{max-width:300px;order:-1}
+    .cats,.prices{grid-template-columns:1fr}
+    .price.featured{transform:none}
+    section{padding:64px 0}
+    .hero{padding:48px 0 60px}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 20px}
+    .seal{max-width:210px}
+    .brand img{height:48px}
+    .topbar .hide-sm{display:none}
+    form{grid-template-columns:1fr;padding:24px}
+    .checks{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Open [DAYS] · [HOURS]</span>
+  <span class="hide-sm">Lampe, Missouri · <a href="tel:+1XXXXXXXXXX">[PHONE]</a></span>
+</div></div>
+
+<header class="site"><div class="wrap">
+  <a class="brand" href="#top"><img src="../images/ledger-logo-wordmark.svg" alt="Ledger Flea Market"></a>
+  <nav class="main" aria-label="Main">
+    <a href="#shop">What We Carry</a>
+    <a href="#booths">Booth Rates</a>
+    <a href="#garage">Garage Sales</a>
+    <a href="#visit">Visit</a>
+    <a class="btn solid" href="#contact">Rent a Booth</a>
+  </nav>
+</div></header>
+
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <div>
+      <p class="eyebrow">Now open in Lampe, Missouri</p>
+      <h1>Something old, something odd, <em>something you didn't know you needed.</em></h1>
+      <p class="lede">Ledger Flea Market is a room full of booths packed with antiques, collectibles and curiosities, and the stock changes every week as vendors bring in new finds.</p>
+      <div class="actions">
+        <a class="btn solid" href="#visit">Plan Your Visit</a>
+        <a class="btn ghost" href="#booths">Become a Vendor</a>
+      </div>
+      <div class="facts">
+        <div><b>$60</b>Booths from, per month</div>
+        <div><b>3</b>Things we love: old, rare, odd</div>
+        <div><b>Indoors</b>Rain or shine</div>
+      </div>
+    </div>
+    <div class="seal"><img src="../images/ledger-logo-badge.svg" alt="Ledger Flea Market seal"></div>
+  </div></section>
+
+  <section id="shop"><div class="wrap">
+    <div class="head">
+      <p class="eyebrow">What we carry</p>
+      <h2>Three aisles of things with a story behind them</h2>
+      <p>Every booth is run by a different vendor, so no two visits look the same.</p>
+    </div>
+    <div class="cats">
+      <article class="cat">
+        <svg viewBox="0 0 120 90" fill="none" stroke="#6B1E1E" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M38 82h44M44 82V48h32v34M40 48h40l-6-16H46z"/><path d="M60 32V16M54 16h12"/><circle cx="60" cy="64" r="7"/><path d="M50 74h20"/></svg>
+        <h3>Antiques</h3>
+        <p class="tag">They don't make 'em like this anymore.</p>
+        <p>Furniture, glassware, crocks, primitives, old tools and pieces with real history behind them.</p>
+      </article>
+      <article class="cat">
+        <svg viewBox="0 0 120 90" fill="none" stroke="#6B1E1E" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="60" cy="45" r="30"/><circle cx="60" cy="45" r="11"/><circle cx="60" cy="45" r="3" fill="#6B1E1E"/><path d="M60 15a30 30 0 0 1 26 15M34 60a30 30 0 0 1-3-8"/></svg>
+        <h3>Collectibles</h3>
+        <p class="tag">Fill the gap in your collection.</p>
+        <p>Records, coins, toys, sports cards, advertising signs and memorabilia of every kind.</p>
+      </article>
+      <article class="cat">
+        <svg viewBox="0 0 120 90" fill="none" stroke="#6B1E1E" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M50 10h20M53 10v22L36 72a6 6 0 0 0 5 8h38a6 6 0 0 0 5-8L67 32V10"/><path d="M43 58h34"/><circle cx="55" cy="68" r="3"/><circle cx="66" cy="64" r="2"/><path d="M84 22l4-4M90 30h5M30 22l-4-4"/></svg>
+        <h3>Oddities</h3>
+        <p class="tag">Ask the vendor. Maybe.</p>
+        <p>The curious, the peculiar and the hard-to-explain. Conversation pieces you won't find anywhere else.</p>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="booths" id="booths"><div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">For vendors</p>
+      <h2>Rent a booth by the month</h2>
+      <p>Set up your space, stock it, and let the shoppers come to you.</p>
+    </div>
+    <div class="prices">
+      <div class="price">
+        <span class="size">4 × 4 FT</span>
+        <h3>Compact Booth</h3>
+        <div class="amt">$60<small> / month</small></div>
+        <ul><li>Great for smalls, jewelry and collectibles</li><li>An easy way to test the waters</li></ul>
+        <a class="btn ghost" href="#contact" data-pick="4x4">Ask About This Booth</a>
+      </div>
+      <div class="price featured">
+        <span class="badge">Most room for the money</span>
+        <span class="size">4 × 8 FT</span>
+        <h3>Standard Booth</h3>
+        <div class="amt">$100<small> / month</small></div>
+        <ul><li>Room for shelving and display cases</li><li>Fits a few furniture pieces</li></ul>
+        <a class="btn" href="#contact" data-pick="4x8">Ask About This Booth</a>
+      </div>
+      <div class="price">
+        <span class="size">CUSTOM</span>
+        <h3>Your Size</h3>
+        <div class="amt" style="font-size:2.4rem;padding:8px 0">By Request</div>
+        <ul><li>More room or an odd-shaped space</li><li>Tell us what you need and we'll quote it</li></ul>
+        <a class="btn ghost" href="#contact" data-pick="custom">Request a Quote</a>
+      </div>
+    </div>
+    <p class="note">Spaces are limited and go first come, first served.</p>
+  </div></section>
+
+  <section class="garage" id="garage"><div class="wrap">
+    <div>
+      <p class="eyebrow">Indoor garage sale space</p>
+      <h2>Have your garage sale <em>without the garage.</em></h2>
+      <p>Clean-out, move or estate? Rent space inside the market and sell to shoppers who are already walking the aisles. No tables in the driveway and no checking the forecast.</p>
+      <a class="btn" href="#contact" data-pick="garage">Reserve a Date</a>
+    </div>
+    <div class="perks">
+      <div class="perk"><span>1</span><div><b>No weather worries</b><small>Hot, cold or raining, your sale goes on.</small></div></div>
+      <div class="perk"><span>2</span><div><b>Built-in foot traffic</b><small>Shoppers are already in the building.</small></div></div>
+      <div class="perk"><span>3</span><div><b>Less hauling</b><small>Bring your stuff and skip setting up the yard.</small></div></div>
+    </div>
+  </div></section>
+
+  <section class="visit" id="visit"><div class="wrap">
+    <div class="hours">
+      <p class="eyebrow">Come see us</p>
+      <h2>Hours &amp; Location</h2>
+      <table>
+        <tr><td>Monday – Thursday</td><td>[HOURS]</td></tr>
+        <tr><td>Friday – Saturday</td><td>[HOURS]</td></tr>
+        <tr><td>Sunday</td><td>[HOURS]</td></tr>
+      </table>
+      <address>
+        <b>Ledger Flea Market</b><br>
+        [STREET ADDRESS]<br>Lampe, Missouri 65681<br>
+        <a href="tel:+1XXXXXXXXXX">[PHONE]</a> · <a href="mailto:info@example.com">[EMAIL]</a>
+      </address>
+    </div>
+    <div class="map">
+      <iframe title="Map of Lampe, Missouri" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Lampe,+MO+65681&z=12&output=embed"></iframe>
+    </div>
+  </div></section>
+
+  <section class="contact" id="contact"><div class="wrap">
+    <div class="side">
+      <p class="eyebrow">Booths &amp; space</p>
+      <h2 style="font-size:clamp(2rem,3.6vw,2.8rem);margin-top:10px">Let's find you a spot</h2>
+      <p>Send us a note about booths, custom spaces or garage sale dates, and we'll get back to you.</p>
+      <a class="phone" href="tel:+1XXXXXXXXXX">[PHONE]</a>
+    </div>
+    <form id="inquiry">
+      <div><label for="name">Name</label><input id="name" name="name" required></div>
+      <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
+      <div class="full"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+      <div class="full">
+        <label>I'm interested in</label>
+        <div class="checks">
+          <label><input type="checkbox" name="interest" value="4x4 ft booth ($60/mo)" data-key="4x4"> 4×4 booth — $60/mo</label>
+          <label><input type="checkbox" name="interest" value="4x8 ft booth ($100/mo)" data-key="4x8"> 4×8 booth — $100/mo</label>
+          <label><input type="checkbox" name="interest" value="Custom size booth" data-key="custom"> Custom size</label>
+          <label><input type="checkbox" name="interest" value="Indoor garage sale space" data-key="garage"> Garage sale space</label>
+        </div>
+      </div>
+      <div class="full"><label for="msg">What do you sell, or any questions?</label><textarea id="msg" name="message"></textarea></div>
+      <div class="full"><button type="submit">Send Inquiry</button></div>
+    </form>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <img src="../images/ledger-logo-wordmark-light.svg" alt="Ledger Flea Market">
+  <nav aria-label="Footer">
+    <a href="#shop">What We Carry</a><a href="#booths">Booth Rates</a><a href="#garage">Garage Sales</a><a href="#visit">Visit</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="copy">© <span id="yr">2026</span> Ledger Flea Market · Lampe, Missouri</div>
+</div></footer>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // Booth buttons pre-check the matching box in the form.
+  document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{
+    const box=document.querySelector('input[data-key="'+a.dataset.pick+'"]'); if(box) box.checked=true;
+  }));
+  // Inquiry form opens the visitor's email app with everything filled in.
+  const INQUIRY_EMAIL='info@example.com';
+  document.getElementById('inquiry').addEventListener('submit',e=>{
+    e.preventDefault();
+    const f=e.target, v=n=>f.elements[n].value.trim();
+    const picks=[...f.querySelectorAll('input[name=interest]:checked')].map(c=>c.value);
+    const subject='Booth/Space Inquiry — '+v('name');
+    const body='Name: '+v('name')+'\nPhone: '+v('phone')+'\nEmail: '+v('email')+'\nInterested in: '+(picks.join(', ')||'Not specified')+'\n\n'+v('message');
+    location.href='mailto:'+INQUIRY_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
